@@ -7,8 +7,12 @@ import WordCard from './WordCard';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className = "App">
+        <h2 id="welcome">Let To Play Game</h2>
+        {
         <WordCard value="hello WORLDS"/>
+        }
+        <h2 id="result"></h2>
       </div>
     );
 
