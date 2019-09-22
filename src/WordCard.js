@@ -26,7 +26,12 @@ Component {
     }
     activationHandler = (c) =>{
         let guess = [...this.state.guess, c.toUpperCase()]
+        if(guess.length == 1){
+            document.getElementById('your-answer').innerHTML = `Your Answer : ${c.toUpperCase()}` 
+        }else
+            document.getElementById('your-answer').innerHTML += c.toUpperCase();
         this.setState({guess})
+        
 
       
         if(guess.length == this.state.chars.length){
