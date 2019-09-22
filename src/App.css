@@ -38,6 +38,7 @@
   background: pink;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -47,6 +48,12 @@
   }
 }
 
-#welcom{
-  background-color:red; 
+#welcome{
+  color:whitesmoke; 
+}
+body{
+  background :url(https://archive-media-0.nyafuu.org/wg/image/1510/26/1510261916787.gif) ;
+  height: 800px;
+  background-size: cover;
+  background-position: center;
 }

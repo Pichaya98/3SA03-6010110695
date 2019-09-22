@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import WordCard from './WordCard';
+import CharacterCard from './CharacterCard';
 
 
 const word = ['Heineken','Federbrau','Singha']
 var item = word[Math.floor(Math.random()*word.length)];
 
-// const word = "Hello";
+
 class App extends Component {
 
   newgame = () => {
@@ -15,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className= "App">
-        <h1 className="welcom"> Let To Play Game</h1>
+        <h1 className="welcome"> Let To Play Game</h1>
 
         <WordCard value={item.toUpperCase()}/>
         <h1 id="result"></h1>

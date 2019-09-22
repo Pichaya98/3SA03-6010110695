@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import WordCard from "./WordCard";
+
 
 export default class CharacterCard extends Component {
     constructor(props){

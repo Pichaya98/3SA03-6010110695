@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import CharacterCard from "./CharacterCard";
 import _ from 'lodash';
 
+
+
 const prepareStateFromWord = (given_word) => {
      let word = given_word.toUpperCase()
      let chars = _.shuffle(Array.from(word)) 
@@ -33,17 +35,16 @@ Component {
             if(guess.join('').toString() == this.state.chars.join('').toString()){
                 this.setState({guess: [], complete: true})
                 document.getElementById('result').innerHTML = `Congratulations! Or Succees`
-               // document.getElementById('newgame').style.display = "inline-block";
-                //document.getElementById('answer').style.display = "none";
+               
                 
             }else{
                 this.setState({guess: [], attempt: this.state.attempt + 1})
                 document.getElementById('result').innerHTML = `Attempt Or Try Again: ${this.state.attempt} `
-                //document.getElementById('wordenter').innerHTML = `You click is Wrong Word: ${guess.join('').toString()} `
+       
             }
         if(this.state.attempt == 3){
             document.getElementById('result').innerHTML = `Game Over! So RestartGame`
-            //document.getElementById('wordenter').innerHTML = `Answer is: ${this.state.chars.join('').toString()}`
+            
             setTimeout(() => window.location.reload(false),3000)
         }
         }
