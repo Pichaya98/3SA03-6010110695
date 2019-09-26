@@ -64,7 +64,7 @@ class App extends Component {
   render() {
     return (
       <div className= "App">
-        <h1 className="welcome"> Let To Play Game</h1>
+        <h1 className="welcome" className="animetion"> Let To Play Game</h1>
 
         <WordCard value={item.toUpperCase()} getAnswer={this.getAnswer}
           getAnswer = {this.getAnswer}
@@ -73,6 +73,8 @@ class App extends Component {
           requestHint ={this.state.requestHint}/>
         <h2 id="your-answer" className="welcome"></h2>
         <h1 id="result" className="welcome"></h1>
+        <br></br><br></br><br></br><br></br>
+
         <button id="newgame" className="button" onClick={this.newgame}>New Game</button>
         <br></br>
         <button id="answer" className="button" onClick = {this.requestAnswer}>Answer</button>

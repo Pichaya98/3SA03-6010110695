@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -42,8 +43,16 @@
   border: 2px solid rgba(2, 54, 54, 0.425);
 }
 
+
 .welcome{
-  color:whitesmoke; 
+
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.212);
+    color: aliceblue;
+    padding: center;
+    width: center;
+    height: center;
+  
 }
 
 body{
@@ -54,7 +63,7 @@ body{
 }
 
 .button:hover{
-  background-color: #4CAF50; /* Green */
+  background-color: rgba(11, 0, 51, 0.582); /* Green */
   border: none;
   color: white;
   padding: 16px 32px;
@@ -98,8 +107,18 @@ body{
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
-  float: right;
-  
+  float: right; 
+}
+
+.animetion{
+  width: 500px;
+  height: 50px;
+  background-color:  rgba(0, 71, 38, 0);
+  color: white;
+  font-weight: bold;
+  position: relative;
+
+  animation: mymove 15s infinite;
 }
 @keyframes App-logo-spin {
   from {
@@ -108,5 +127,9 @@ body{
   to {
     transform: rotate(360deg);
   }
+}
+@keyframes mymove {
+  from {left: 0%;}
+  to {left: 100%;}
 }
 
