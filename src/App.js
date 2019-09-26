@@ -12,7 +12,7 @@ class App extends Component {
   
   constructor(){
     super()
-    this.state = {requestAnswer: false, 
+    this.state = {requestAnswer: false, requestHint: false,
 
       play: false,
       pause: true
@@ -47,6 +47,13 @@ class App extends Component {
     this.setState({requestAnswer: true});
   }
 
+  requestHint = () =>{
+    this.setState({requestHint: true});
+  }
+
+  getHint = (hint) =>{
+    document.getElementById('result').innerHTML = `Hint is : ${hint}`
+  }
 
   getAnswer = (answer) =>{
     document.getElementById('result').innerHTML = `Answer is : ${answer}`
@@ -64,16 +71,16 @@ class App extends Component {
           getHint = {this.getHint}
           requestAnswer = {this.state.requestAnswer}
           requestHint ={this.state.requestHint}/>
-        <h2 id="your-answer"></h2>
-        <h1 id="result"></h1>
+        <h2 id="your-answer" className="welcome"></h2>
+        <h1 id="result" className="welcome"></h1>
         <button id="newgame" className="button" onClick={this.newgame}>New Game</button>
         <br></br>
         <button id="answer" className="button" onClick = {this.requestAnswer}>Answer</button>
         <br></br>
-        
+        <button id ="hint" className = "button" onClick={this.requestHint}>Hint</button>
         <br></br><br></br>
-        <button className="buttonAudioL" onClick={this.play}>Play</button>
-        <button className="buttonAudioR" onClick={this.pause}>Pause</button>
+        <button className="buttonAudioPlay" onClick={this.play}>Play</button>
+        <button className="buttonAudioPause" onClick={this.pause}>Pause</button>
 
         
       </div>

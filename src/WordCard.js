@@ -42,13 +42,13 @@ Component {
                 document.getElementById('result').innerHTML = `Congratulations! Or Succees`
                 document.getElementById('newgame').style.display = "inline-block";
                 document.getElementById('answer').style.display = "none"
-               
+                document.getElementById('hint').style.display = "none"
                
                 
             }else{
                 this.setState({guess: [], attempt: this.state.attempt + 1})
                 document.getElementById('result').innerHTML = `Attempt Or Try Again: ${this.state.attempt} `
-                document.getElementById('result').innerHTML = `You click is Wrong Word: ${guess.join('').toString()} `
+                document.getElementById('result').innerHTML = `Your answer is Wrong Word: ${guess.join('').toString()} `
             }
         if(this.state.attempt == 3){
             document.getElementById('result').innerHTML = `Game Over! So RestartGame`

@@ -68,7 +68,7 @@ body{
   cursor: pointer;
 }
 
-.buttonAudioL{
+.buttonAudioPlay{
   background-color:cadetblue; /* Green */
   border: none;
   color: white;
@@ -85,7 +85,7 @@ body{
   
 }
 
-.buttonAudioR{
+.buttonAudioPause{
   background-color: darkslategray; /* Green */
   border: none;
   color: white;
