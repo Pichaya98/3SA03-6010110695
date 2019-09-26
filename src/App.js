@@ -12,12 +12,28 @@ class App extends Component {
   
   constructor(){
     super()
+    this.state = {
 
-    
+      play: false,
+      pause: true
+
+    };
     this.url = "http://streaming11.tdiradio.com:8000/tdiradiobor.mp3";
-  this.audio = new Audio(this.url);
-  console.log(this.audio);
-  this.audio.play();
+    this.audio = new Audio(this.url);
+    
+  }
+  play= () =>{
+    this.setState({
+      play: true,
+      pause: false
+    });
+    console.log(this.audio);
+    this.audio.play();
+  }
+
+  pause= () => {
+  this.setState({ play: false, pause: true });
+    this.audio.pause();
   }
 
   newgame = () => {
@@ -39,6 +55,9 @@ class App extends Component {
         <h2 id="your-answer"></h2>
         <h1 id="result"></h1>
         <button id="newgame" className="button" onClick={this.newgame}>New Game</button>
+        <br></br>
+        <button className="buttonAudio" onClick={this.play}>Play</button>
+        <button className="buttonAudio" onClick={this.pause}>Pause</button>
       </div>
     );
 
