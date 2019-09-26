@@ -56,8 +56,8 @@ class App extends Component {
         <h1 id="result"></h1>
         <button id="newgame" className="button" onClick={this.newgame}>New Game</button>
         <br></br>
-        <button className="buttonAudio" onClick={this.play}>Play</button>
-        <button className="buttonAudio" onClick={this.pause}>Pause</button>
+        <button className="buttonAudioL" onClick={this.play}>Play</button>
+        <button className="buttonAudioR" onClick={this.pause}>Pause</button>
       </div>
     );
 
