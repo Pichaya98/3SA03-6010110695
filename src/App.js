@@ -9,6 +9,16 @@ var item = word[Math.floor(Math.random()*word.length)];
 
 
 class App extends Component {
+  
+  constructor(){
+    super()
+
+    
+    this.url = "http://streaming11.tdiradio.com:8000/tdiradiobor.mp3";
+  this.audio = new Audio(this.url);
+  console.log(this.audio);
+  this.audio.play();
+  }
 
   newgame = () => {
     window.location.reload(false);
@@ -17,6 +27,8 @@ class App extends Component {
   getAnswer = (answer) => {
     document.getElementById('complete').innerHTML = `Answer : ${answer}`;
   }
+  
+
 
   render() {
     return (
